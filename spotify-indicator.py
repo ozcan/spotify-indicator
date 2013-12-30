@@ -103,6 +103,7 @@ menu.show_all()
 menu_open.hide()
 
 def quit_callback(item):
+    spotify.Quit()
     indicator.set_status(appindicator.STATUS_PASSIVE)
     gtk.main_quit()
 
