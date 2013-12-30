@@ -1,0 +1,22 @@
+#include <tunables/global>
+ 
+/opt/spotify/spotify-client/spotify {
+  #include <abstractions/X>
+  #include <abstractions/audio>
+  #include <abstractions/base>
+  #include <abstractions/dbus-session>
+  #include <abstractions/fonts>
+  #include <abstractions/freedesktop.org>
+  #include <abstractions/kde>
+  #include <abstractions/nameservice>
+  #include <abstractions/nvidia>
+  #include <abstractions/user-tmp>
+
+  /opt/spotify/spotify-client/Data/SpotifyHelper ixr,
+
+  # block sni-qt 
+  deny /usr/lib/i386-linux-gnu/qt4/plugins/systemtrayicon/libsni-qt.so r,
+  deny /usr/lib/x86_64-linux-gnu/qt4/plugins/systemtrayicon/libsni-qt.so r,
+ 
+  /** mrwkl,
+}
